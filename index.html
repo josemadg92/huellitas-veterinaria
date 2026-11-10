@@ -148,12 +148,12 @@
       .hero-grid { grid-template-columns: 1fr; min-height: 0; }
       .hero-copy { padding-bottom: 0; gap: 24px; }
       .hero h1 .hand { margin-left: 40%; }
-      .hero-photo { max-width: 340px; width: 100%; order: 3; margin-top: 8px; }
+      .hero-photo { max-width: 300px; width: 100%; order: 3; margin-top: calc(min(21vw, 9rem) * .62); }
       .hero-photo img { max-height: none; }
       .hero-side { order: 2; flex-direction: row; justify-content: flex-start; align-items: stretch; gap: 12px; padding: 0; }
       .emergency { width: auto; flex: 1; }
-      /* «Huellitas» a todo el ancho, cruzando al perro por el pecho (el perro es el último elemento del grid) */
-      .wordmark { font-size: min(21vw, 9rem); bottom: calc(min(100vw - 32px, 340px) * .5); }
+      /* «Huellitas» a todo el ancho, justo encima del perro: la coronilla solo pisa la base de las letras */
+      .wordmark { font-size: min(21vw, 9rem); bottom: calc(min(100vw - 32px, 300px) * 1.22 - 22px); }
     }
 
     /* ===== Panel oscuro (servicios / FAQ) ===== */
