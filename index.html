@@ -1,0 +1,709 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Clínica Veterinaria en Sevilla | Huellitas</title>
+  <meta name="description" content="Clínica veterinaria en Sevilla con urgencias 24/7, trato amigable y seguimiento en directo de tu mascota. Pide tu cita online en menos de un minuto.">
+  <link rel="canonical" href="https://josemadg92.github.io/huellitas-veterinaria/">
+  <meta property="og:title" content="Huellitas · Clínica Veterinaria en Sevilla">
+  <meta property="og:description" content="El mejor cuidado para tu mejor amigo, en cada etapa. Pide cita online.">
+  <meta property="og:image" content="https://josemadg92.github.io/huellitas-veterinaria/assets/img/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:url" content="https://josemadg92.github.io/huellitas-veterinaria/">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="theme-color" content="#0F1720">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%230F1720'/%3E%3Cg fill='%23FF6A5C'%3E%3Ccircle cx='32' cy='40' r='11'/%3E%3Ccircle cx='17' cy='27' r='6'/%3E%3Ccircle cx='26' cy='17' r='6'/%3E%3Ccircle cx='38' cy='17' r='6'/%3E%3Ccircle cx='47' cy='27' r='6'/%3E%3C/g%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/img/hero-perro.webp" fetchpriority="high">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "VeterinaryCare",
+    "name": "Huellitas Clínica Veterinaria",
+    "url": "https://josemadg92.github.io/huellitas-veterinaria/",
+    "image": "https://josemadg92.github.io/huellitas-veterinaria/assets/img/og.jpg",
+    "telephone": "+34 960 000 000",
+    "address": { "@type": "PostalAddress", "streetAddress": "Calle Feria, 00", "addressLocality": "Sevilla", "postalCode": "41003", "addressCountry": "ES" },
+    "areaServed": "Sevilla",
+    "openingHoursSpecification": [
+      { "@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"], "opens": "00:00", "closes": "23:59" }
+    ]
+  }
+  </script>
+
+  <style>
+    :root {
+      --bg: #F6F8FA;
+      --ink: #0F1720;
+      --slate: #34404F;
+      --blue: #8DB7F5;
+      --coral: #FF6A5C;
+      --coral-dark: #E9503F;
+      --muted: #5B6675;
+      --line: #E3E8EE;
+      --white: #FFFFFF;
+      --r-xl: 40px;
+      --r-lg: 24px;
+      --r-md: 16px;
+      --shadow: 0 24px 48px -24px rgba(15, 23, 32, .35);
+      --font: "Raleway", ui-sans-serif, system-ui, sans-serif;
+      --hand: "Amatic SC", "Comic Sans MS", cursive;
+      --wrap: 1160px;
+    }
+    /* Raleway estática solo para los rótulos gigantes: la variable de Google Fonts
+       tiene contornos solapados que en Windows se ven con muescas a tamaños enormes */
+    @font-face { font-family: "Raleway Display"; src: url("assets/fonts/raleway-600.woff2") format("woff2"); font-weight: 600; font-display: swap; }
+    @font-face { font-family: "Raleway Display"; src: url("assets/fonts/raleway-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
+    *, *::before, *::after { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; font-family: var(--font); color: var(--ink); background: var(--bg); line-height: 1.6; font-size: 1rem; overflow-x: hidden; }
+    img { display: block; max-width: 100%; height: auto; }
+    svg { display: block; }
+    a { color: inherit; }
+    h1, h2, h3, p { margin: 0; }
+    h1, h2 { font-weight: 600; letter-spacing: -.025em; line-height: 1.05; }
+    h2 { font-size: clamp(2rem, 4.2vw, 3.1rem); }
+    h3 { font-weight: 700; font-size: 1.15rem; line-height: 1.25; }
+    .wrap { width: min(100% - 32px, var(--wrap)); margin-inline: auto; position: relative; }
+    .section { padding-block: clamp(72px, 10vw, 128px); position: relative; }
+    .center { text-align: center; }
+    .muted { color: var(--muted); }
+
+    /* Palabra manuscrita (Amatic SC) */
+    .hand { font-family: var(--hand); font-weight: 700; color: var(--coral); text-transform: uppercase; letter-spacing: .02em; display: inline-block; transform: rotate(-6deg); line-height: .8; font-size: 1.25em; }
+    .hand-inline { font-size: 1.15em; margin-left: .12em; vertical-align: -.08em; transform: translateY(.12em); }
+
+    /* Fondo con trazos */
+    .squiggle { position: absolute; pointer-events: none; z-index: 0; }
+
+    .skip { position: absolute; left: -999px; top: 8px; background: var(--ink); color: #fff; padding: 10px 16px; border-radius: 10px; z-index: 200; }
+    .skip:focus { left: 16px; }
+    :focus-visible { outline: 3px solid var(--coral); outline-offset: 3px; }
+
+    /* Botones */
+    .btn { display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 48px; padding: 0 28px; border-radius: 12px; font: 700 .95rem var(--font); text-decoration: none; border: 0; cursor: pointer; transition: transform .2s, background .2s, box-shadow .2s; }
+    .btn-coral { background: var(--coral); color: var(--ink); box-shadow: 0 12px 24px -12px rgba(255, 106, 92, .9); }
+    .btn-coral:hover { background: var(--coral-dark); transform: translateY(-2px); }
+    .btn svg { width: 18px; height: 18px; }
+    .circle-btn { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid currentColor; display: grid; place-items: center; flex: none; background: transparent; color: inherit; cursor: pointer; transition: background .2s, color .2s; }
+    .circle-btn svg { width: 18px; height: 18px; }
+
+    /* ===== Cabecera ===== */
+    .demo-bar { background: var(--ink); color: #B9C3CF; text-align: center; font-size: .8rem; font-weight: 600; padding: 7px 16px; }
+    .demo-bar b { color: var(--coral); }
+    .header { position: sticky; top: 0; z-index: 100; background: rgba(246, 248, 250, .88); backdrop-filter: blur(12px); }
+    .header .wrap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; height: 76px; gap: 16px; }
+    .nav ul { display: flex; gap: 4px; list-style: none; margin: 0; padding: 0; }
+    .nav a { display: block; text-decoration: none; font-weight: 600; font-size: .9rem; padding: 8px 14px; border-radius: 10px; color: var(--slate); transition: background .2s; }
+    .nav a:hover { background: var(--line); }
+    .nav a[aria-current="page"] { background: var(--ink); color: #fff; }
+    .logo { font-weight: 700; font-size: 1.4rem; letter-spacing: -.02em; text-decoration: none; display: flex; align-items: center; gap: 8px; }
+    .logo svg { width: 26px; height: 26px; color: var(--coral); }
+    .header-cta { justify-self: end; display: flex; gap: 10px; align-items: center; }
+    .header-cta .btn { min-height: 42px; padding: 0 20px; }
+    .menu-btn { display: none; width: 44px; height: 44px; border-radius: 12px; border: 0; background: var(--ink); color: #fff; cursor: pointer; place-items: center; }
+    .menu-btn svg { width: 22px; height: 22px; }
+    @media (max-width: 900px) {
+      .header .wrap { grid-template-columns: auto 1fr; }
+      .logo { order: -1; }
+      .nav { display: none; }
+      .menu-btn { display: grid; }
+      .nav.open { display: block; position: absolute; top: 76px; left: -16px; right: -16px; background: var(--bg); padding: 12px 16px 20px; box-shadow: var(--shadow); }
+      .nav.open ul { flex-direction: column; }
+      .nav.open a { padding: 14px; font-size: 1.05rem; }
+    }
+
+    /* ===== Hero ===== */
+    .hero { position: relative; padding: 32px 0 0; overflow: hidden; }
+    .hero-grid { display: grid; grid-template-columns: 1fr 1.05fr 1fr; gap: 24px; min-height: 720px; position: relative; }
+    .hero-copy { position: relative; z-index: 3; padding-top: 8px; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 32px; }
+    .hero h1 { font-size: clamp(2.3rem, 4vw, 3.1rem); }
+    .hero h1 .hand { font-size: .78em; display: block; margin: 18px 0 0 18%; transform: rotate(-4deg); white-space: nowrap; }
+    .hero-bottom p { color: var(--muted); max-width: 30ch; margin-bottom: 20px; font-weight: 500; }
+    .wordmark { position: absolute; left: -50vw; right: -50vw; text-align: center; bottom: 200px; font-family: "Raleway Display", var(--font); font-weight: 600; font-size: clamp(5rem, 19vw, 15.5rem); letter-spacing: -.06em; line-height: .8; color: #1B2430; white-space: nowrap; z-index: 1; user-select: none; text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; }
+    .hero-photo { position: relative; z-index: 2; align-self: end; justify-self: center; width: 112%; max-width: 440px; }
+    .hero-photo img { width: 100%; height: auto; }
+    .hero-side { position: relative; z-index: 3; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-end; padding: 24px 0 48px; }
+    .emergency { width: 220px; background: var(--ink); color: #fff; border-radius: var(--r-md); padding: 18px; text-decoration: none; box-shadow: var(--shadow); transition: transform .2s; }
+    .emergency:hover { transform: translateY(-4px); }
+    .emergency strong { display: block; font-size: 1.8rem; font-weight: 500; line-height: 1; }
+    .emergency span { display: block; font-weight: 600; margin-top: 4px; }
+    .emergency .row { display: flex; align-items: center; justify-content: space-between; margin-top: 14px; font-size: .85rem; color: #B9C3CF; gap: 8px; }
+    .emergency .circle-btn { display: grid; place-items: center; width: 36px; height: 36px; margin: 0; color: #fff; }
+    .emergency .circle-btn svg { width: 16px; height: 16px; }
+    .emergency:hover .circle-btn { background: var(--coral); border-color: var(--coral); color: var(--ink); }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; min-height: 0; }
+      .hero-copy { padding-bottom: 0; gap: 24px; }
+      .hero h1 .hand { margin-left: 40%; }
+      .hero-photo { max-width: 380px; width: 100%; order: 3; }
+      .hero-side { order: 2; flex-direction: row; justify-content: flex-start; align-items: stretch; gap: 12px; padding: 0; }
+      .emergency { width: auto; flex: 1; }
+      .wordmark { bottom: 20px; }
+    }
+
+    /* ===== Panel oscuro (servicios / FAQ) ===== */
+    .dark-panel { background: var(--ink); color: #fff; border-radius: var(--r-xl); padding: clamp(48px, 7vw, 88px) clamp(20px, 4vw, 56px); position: relative; overflow: hidden; }
+    .dark-panel h2 { color: #fff; }
+    .services { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 64px; align-items: start; }
+    .s-card { background: #fff; color: var(--ink); border-radius: var(--r-lg); padding: 12px 12px 18px; box-shadow: 0 30px 50px -30px rgba(0,0,0,.6); transition: transform .3s; }
+    .s-card:hover { transform: translateY(-8px) rotate(-.5deg); }
+    .s-card:nth-child(1) { margin-top: 0; }
+    .s-card:nth-child(2) { margin-top: 64px; }
+    .s-card:nth-child(3) { margin-top: 32px; }
+    .s-card:nth-child(4) { margin-top: 72px; }
+    .s-card img { width: 100%; aspect-ratio: 5 / 6; object-fit: cover; border-radius: 16px; background: var(--slate); }
+    .s-card h3 { margin: 16px 6px 6px; }
+    .s-card p { font-size: .98rem; color: var(--muted); margin: 0 6px 16px; }
+    .s-card .circle-btn { margin-left: 6px; }
+    .s-card:hover .circle-btn { background: var(--ink); color: #fff; }
+    .panel-cta { margin-top: 56px; text-align: center; position: relative; }
+    @media (max-width: 900px) {
+      .services { grid-template-columns: repeat(2, 1fr); }
+      .s-card:nth-child(n) { margin-top: 0; }
+      .s-card:nth-child(even) { margin-top: 40px; }
+    }
+    @media (max-width: 480px) {
+      .services { gap: 12px; }
+      .s-card p { display: none; }
+    }
+
+    /* ===== Más que un buen cuidado ===== */
+    .more-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+    .more-grid h2 { width: fit-content; }
+    .more-grid h2 .hand { display: block; text-align: center; margin-top: 14px; transform: none; font-size: 1.05em; }
+    .points { list-style: none; padding: 0; margin: 48px 0 32px; display: grid; gap: 14px; }
+    .points li { background: var(--ink); color: #fff; border-radius: var(--r-md); padding: 18px 20px; display: flex; gap: 16px; align-items: flex-start; }
+    .points .pi { width: 34px; height: 34px; border-radius: 10px; background: #fff; color: var(--ink); display: grid; place-items: center; flex: none; }
+    .points .pi svg { width: 18px; height: 18px; }
+    .points strong { display: block; font-weight: 700; }
+    .points span { display: block; font-size: .95rem; color: #B9C3CF; margin-top: 2px; }
+    .collage { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; position: relative; }
+    .collage img { width: 100%; aspect-ratio: 11 / 13; object-fit: cover; border-radius: var(--r-md); box-shadow: var(--shadow); }
+    .collage img:nth-child(1) { transform: rotate(-3deg); }
+    .collage img:nth-child(2) { transform: rotate(3deg) translateY(-24px); }
+    .collage img:nth-child(3) { transform: rotate(2deg); }
+    .collage img:nth-child(4) { transform: rotate(-2deg) translateY(-24px); }
+    .ff-card { grid-column: 1 / -1; justify-self: center; width: 92%; margin-top: -48px; position: relative; z-index: 2; background: var(--blue); border-radius: var(--r-md); padding: 20px 24px; box-shadow: var(--shadow); display: grid; grid-template-columns: 1fr 1fr; gap: 6px 24px; }
+    .ff-card h3 { grid-column: 1 / -1; margin-bottom: 4px; }
+    .ff-card p { font-size: .95rem; font-weight: 500; }
+    @media (max-width: 520px) { .ff-card { grid-template-columns: 1fr; width: 100%; margin-top: -24px; } }
+    .ff-card b { font-weight: 700; }
+    @media (max-width: 900px) { .more-grid { grid-template-columns: 1fr; } .collage { max-width: 520px; margin: 32px auto 0; } }
+
+    /* ===== Transparencia ===== */
+    .transp { overflow: hidden; }
+    .transp h2 .hand { margin-left: .7em; font-size: 1.4em; transform: translateY(.14em); }
+    .transp-grid { display: grid; grid-template-columns: 1fr 1.1fr 1fr; gap: 24px; align-items: end; margin-top: 24px; position: relative; }
+    .transp .wordmark { color: #E7ECF1; bottom: auto; top: 30%; }
+    .transp-photo { position: relative; z-index: 2; }
+    .transp-photo { justify-self: center; width: 100%; max-width: 400px; }
+    .transp-photo img { width: 100%; height: auto; }
+    .transp-left { position: relative; z-index: 2; padding-bottom: 12px; }
+    .transp-left p { color: var(--muted); font-weight: 500; max-width: 32ch; margin-bottom: 20px; }
+    .transp-right { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+    .live-card { background: var(--ink); color: #fff; border-radius: var(--r-md); padding: 10px 10px 14px; }
+    .live-card img { width: 100%; aspect-ratio: 3 / 2; object-fit: cover; border-radius: 10px; }
+    .live-card h3 { font-size: 1.02rem; margin: 12px 4px 4px; }
+    .live-card p { font-size: .85rem; color: #B9C3CF; margin: 0 4px; }
+    @media (max-width: 900px) {
+      .transp-grid { grid-template-columns: 1fr; }
+      .transp-photo { max-width: 440px; margin: 0 auto; order: -1; }
+    }
+
+    /* ===== Formulario de cita ===== */
+    .booking h2 { width: fit-content; }
+    .booking h2 .hand { display: block; width: fit-content; margin: 4px -2.4em 0 auto; transform: none; font-size: 1.6em; }
+    @media (max-width: 1100px) { .booking h2 .hand { margin-right: 0; font-size: 1.3em; } }
+    .booking-intro { max-width: 52ch; margin: -12px 0 32px; color: var(--muted); font-weight: 500; }
+    @media (max-width: 1100px) { .booking-intro { margin-top: 16px; } }
+    .form { display: grid; gap: 28px; }
+    .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+    .field label, .legend { display: block; font-weight: 700; font-size: .9rem; margin-bottom: 8px; }
+    fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+    input[type="text"], input[type="tel"], input[type="email"] { width: 100%; min-height: 50px; border: 1.5px solid var(--line); border-radius: 12px; background: #fff; padding: 0 16px; font: 500 1rem var(--font); color: var(--ink); transition: border-color .2s; }
+    input[type="text"]:focus, input[type="tel"]:focus, input[type="email"]:focus { outline: none; border-color: var(--ink); }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip { position: relative; }
+    .chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+    .chip span { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border-radius: 999px; border: 1.5px solid var(--line); background: #fff; font-weight: 600; font-size: .88rem; transition: background .15s, border-color .15s, color .15s; }
+    .chip span::after { content: ""; width: 14px; height: 14px; border-radius: 50%; border: 1.5px solid #B9C3CF; }
+    .chip input:checked + span { background: var(--coral); border-color: var(--coral); color: var(--ink); }
+    .chip input:checked + span::after { border-color: var(--ink); background: radial-gradient(circle, var(--ink) 40%, transparent 45%); }
+    .chip input:focus-visible + span { outline: 3px solid var(--ink); outline-offset: 2px; }
+    .chip input:disabled + span { opacity: .4; text-decoration: line-through; }
+    .pets { display: grid; grid-template-columns: repeat(6, 1fr); gap: 10px; }
+    .pet { position: relative; }
+    .pet input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+    .pet span { display: flex; flex-direction: column; justify-content: space-between; height: 96px; padding: 14px; border-radius: var(--r-md); border: 1.5px solid var(--line); background: #fff; font-weight: 700; transition: background .15s, border-color .15s; }
+    .pet svg { width: 30px; height: 30px; align-self: flex-end; color: var(--slate); }
+    .pet input:checked + span { background: var(--coral); border-color: var(--coral); }
+    .pet input:checked + span svg { color: var(--ink); }
+    .pet input:focus-visible + span { outline: 3px solid var(--ink); outline-offset: 2px; }
+    .consent { display: flex; gap: 10px; align-items: flex-start; font-size: .92rem; color: var(--muted); font-weight: 500; }
+    .consent input { width: 20px; height: 20px; margin: 1px 0 0; accent-color: var(--ink); flex: none; }
+    .hp { position: absolute; left: -9999px; }
+    .form-msg { display: none; background: var(--blue); border-radius: 12px; padding: 14px 18px; font-weight: 600; }
+    .form-msg.show { display: block; }
+    @media (max-width: 760px) { .grid-2 { grid-template-columns: 1fr; } .pets { grid-template-columns: repeat(3, 1fr); } }
+
+    /* ===== FAQ ===== */
+    .faq-head { display: flex; justify-content: space-between; align-items: end; gap: 24px; flex-wrap: wrap; }
+    .faq-head h2 { text-align: left; }
+    .faq-head h2 { flex: 1; display: flex; align-items: center; flex-wrap: wrap; gap: 0 .5em; }
+    .faq-head .hand { flex: 1; text-align: center; font-size: 2em; transform: translateY(.06em); line-height: .85; }
+    @media (max-width: 620px) { .faq-head .hand { font-size: 1.5em; } }
+    .faqs { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; margin-top: 40px; align-items: start; }
+    .faq { background: #fff; color: var(--ink); border-radius: var(--r-lg); padding: 10px 10px 16px; position: relative; }
+    .faq:nth-child(even) { margin-top: 48px; }
+    .faq .ph { position: relative; border-radius: 16px; overflow: hidden; background: var(--slate); }
+    .faq .ph img { width: 100%; aspect-ratio: 11 / 13; object-fit: cover; transition: opacity .3s; }
+    .faq .answer { position: absolute; inset: 0; padding: 16px; background: var(--slate); color: #fff; font-size: .95rem; font-weight: 500; line-height: 1.5; display: flex; align-items: center; opacity: 0; transition: opacity .3s; }
+    .faq.open .answer { opacity: 1; }
+    .faq h3 { font-size: 1rem; margin: 14px 6px 12px; min-height: 2.5em; }
+    .faq .circle-btn { margin-left: 6px; }
+    .faq .circle-btn svg { transition: transform .3s; }
+    .faq.open .circle-btn { background: var(--coral); border-color: var(--coral); }
+    .faq.open .circle-btn svg { transform: rotate(45deg); }
+    @media (max-width: 1000px) { .faqs { grid-template-columns: repeat(3, 1fr); } .faq:nth-child(n) { margin-top: 0; } }
+    @media (max-width: 620px) { .faqs { grid-template-columns: repeat(2, 1fr); gap: 12px; } }
+
+    /* ===== Opiniones ===== */
+    .reviews h2 .hand { margin-left: .5em; font-size: 1.3em; transform: translateY(.12em); }
+    .reviews-grid { display: grid; grid-template-columns: 1fr minmax(240px, .9fr) 1fr; gap: 32px; align-items: center; margin-top: 48px; }
+    .reviews-col { display: grid; gap: 40px; }
+    .review header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+    .review strong { font-weight: 700; }
+    .stars { color: var(--coral); letter-spacing: 3px; font-size: .95rem; }
+    .review p { font-size: 1rem; color: var(--muted); font-weight: 500; }
+    .reviews-photo img { width: 100%; height: auto; }
+    .score { display: flex; align-items: center; gap: 12px; justify-content: center; margin-top: 40px; font-weight: 600; color: var(--muted); }
+    .score b { font-size: 2rem; color: var(--ink); font-weight: 600; }
+    @media (max-width: 900px) { .reviews-grid { grid-template-columns: 1fr; } .reviews-photo { max-width: 360px; margin: 0 auto; order: -1; } }
+
+    /* ===== Footer ===== */
+    footer { background: var(--blue); color: var(--ink); border-radius: var(--r-xl) var(--r-xl) 0 0; padding: 64px 0 0; overflow: hidden; margin-top: 40px; }
+    .foot { display: grid; grid-template-columns: 1fr 1fr 1.4fr; gap: 40px; }
+    .foot ul { list-style: none; padding: 0; margin: 0; display: grid; gap: 8px; }
+    .foot a { text-decoration: none; font-weight: 600; font-size: 1.15rem; }
+    .foot a:hover { text-decoration: underline; text-underline-offset: 4px; }
+    .news h3 { font-size: 1.5rem; font-weight: 600; margin-bottom: 16px; }
+    .news form { display: flex; gap: 8px; }
+    .news input { flex: 1; min-width: 0; min-height: 48px; border: 0; border-radius: 12px; padding: 0 16px; font: 500 1rem var(--font); }
+    .news small { display: block; font-size: .88rem; margin-top: 8px; font-weight: 500; }
+    .socials { display: flex; gap: 8px; margin-top: 20px; }
+    .socials a { width: 44px; height: 44px; border-radius: 50%; background: var(--ink); color: #fff; display: grid; place-items: center; }
+    .socials a:hover { background: var(--coral); color: var(--ink); }
+    .socials svg { width: 18px; height: 18px; }
+    .legal { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; margin-top: 56px; padding-top: 20px; border-top: 1px solid rgba(15,23,32,.15); font-size: .85rem; font-weight: 500; }
+    .legal nav { display: flex; gap: 20px; flex-wrap: wrap; }
+    .legal a { font-size: .85rem; }
+    .giant { font-family: "Raleway Display", var(--font); font-weight: 700; font-size: clamp(4rem, 17.5vw, 15rem); letter-spacing: -.04em; line-height: .78; color: #fff; text-align: center; margin: 24px 0 -.08em; white-space: nowrap; user-select: none; text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; font-kerning: normal; }
+    @media (max-width: 760px) { .foot { grid-template-columns: 1fr 1fr; } .news { grid-column: 1 / -1; } }
+
+    /* Animaciones */
+    .reveal { opacity: 0; transform: translateY(28px); transition: opacity .8s ease, transform .8s ease; }
+    .reveal.in { opacity: 1; transform: none; }
+    .no-js .reveal { opacity: 1; transform: none; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      *, *::before, *::after { transition: none !important; }
+    }
+    /* En móvil, los saltos de línea fijos de los títulos parten mal el texto */
+    @media (max-width: 620px) { h2 br { display: none; } }
+  </style>
+</head>
+<body class="no-js">
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="paw" viewBox="0 0 64 64"><g fill="currentColor"><circle cx="32" cy="41" r="12"/><circle cx="15" cy="27" r="6.5"/><circle cx="26" cy="15" r="6.5"/><circle cx="38" cy="15" r="6.5"/><circle cx="49" cy="27" r="6.5"/></g></symbol>
+    <symbol id="arrow" viewBox="0 0 24 24"><path d="M5 12h14m-6-6 6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="arrow-l" viewBox="0 0 24 24"><path d="M19 12H5m6-6-6 6 6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="play" viewBox="0 0 24 24"><path d="M7 4.5v15l12-7.5z" fill="currentColor"/></symbol>
+    <symbol id="menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <symbol id="close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6 6 18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></symbol>
+    <!-- Iconos tipo de mascota -->
+    <symbol id="pet-dog" viewBox="0 0 32 32"><path d="M8 6c-3 1-4 6-3 9l3-1v7a6 6 0 0 0 6 6h4a6 6 0 0 0 6-6v-7l3 1c1-3 0-8-3-9-2-.7-4 .5-5 2h-6c-1-1.5-3-2.7-5-2z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12.5" cy="15" r="1.4" fill="currentColor"/><circle cx="19.5" cy="15" r="1.4" fill="currentColor"/><path d="M14 20h4l-2 2z" fill="currentColor"/></symbol>
+    <symbol id="pet-cat" viewBox="0 0 32 32"><path d="M6 5l4 6h12l4-6v14a10 10 0 0 1-20 0z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="12" cy="17" r="1.4" fill="currentColor"/><circle cx="20" cy="17" r="1.4" fill="currentColor"/><path d="M14.5 21h3L16 22.5zM3 20l6 1M3 24l6-1M29 20l-6 1M29 24l-6-1" stroke="currentColor" stroke-width="1.6" fill="currentColor" stroke-linecap="round"/></symbol>
+    <symbol id="pet-bird" viewBox="0 0 32 32"><path d="M20 8a5 5 0 0 0-9 3v4c-3 1-6 4-7 9 5 0 10-1 13-4l5 8m-1-17 5 1-4 2" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="17" cy="10" r="1.3" fill="currentColor"/></symbol>
+    <symbol id="pet-rodent" viewBox="0 0 32 32"><ellipse cx="17" cy="19" rx="11" ry="7" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10" cy="12" r="3.5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="9" cy="18" r="1.3" fill="currentColor"/><path d="M28 21c2 1 3 3 2 5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="pet-reptile" viewBox="0 0 32 32"><path d="M4 14c2-3 6-3 8-1l6 3c3 1 6 0 8 2s2 6-1 7-4-2-6-2l-5 1c-3 0-4-2-4-4l-3-1c-2 0-3-2-3-5z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><circle cx="7.5" cy="14" r="1.2" fill="currentColor"/><path d="M14 20l-2 5m8-4 1 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="pet-other" viewBox="0 0 32 32"><circle cx="16" cy="16" r="11" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="10.5" cy="16" r="1.6" fill="currentColor"/><circle cx="16" cy="16" r="1.6" fill="currentColor"/><circle cx="21.5" cy="16" r="1.6" fill="currentColor"/></symbol>
+    <symbol id="ig" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></symbol>
+    <symbol id="yt" viewBox="0 0 24 24"><rect x="2" y="5" width="20" height="14" rx="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 9v6l5-3z" fill="currentColor"/></symbol>
+    <symbol id="fb" viewBox="0 0 24 24"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v3H7v4h3v6h4v-6h3l1-4h-4V8z" fill="currentColor"/></symbol>
+    <symbol id="tt" viewBox="0 0 24 24"><path d="M16 3c.4 2.6 2 4.2 4.5 4.4v3.4a8 8 0 0 1-4.5-1.4v6.1A5.5 5.5 0 1 1 10.5 10v3.5a2 2 0 1 0 2 2V3z" fill="currentColor"/></symbol>
+    <symbol id="sq" viewBox="0 0 1200 800"><path d="M-50 640C120 520 60 300 260 260s300 220 470 120S760 40 940 70s240 260 120 420-380 120-430 280" fill="none" stroke="currentColor" stroke-width="34" stroke-linecap="round"/></symbol>
+  </defs>
+</svg>
+
+<a class="skip" href="#main">Saltar al contenido</a>
+<div class="demo-bar"><b>Proyecto de portfolio creado por La Trama</b> · Clínica ficticia creada como muestra de diseño web para clínicas veterinarias</div>
+
+<header class="header">
+  <div class="wrap">
+    <nav class="nav" id="nav" aria-label="Principal">
+      <ul>
+        <li><a href="#inicio" aria-current="page">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#faq">Dudas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+    <a href="#inicio" class="logo" aria-label="Huellitas, ir al inicio"><svg><use href="#paw"/></svg>Huellitas</a>
+    <div class="header-cta">
+      <a class="btn btn-coral" href="#cita">Pedir cita</a>
+      <button class="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Abrir menú"><svg><use href="#menu"/></svg></button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="inicio">
+    <svg class="squiggle" style="width:1200px;left:50%;top:-40px;transform:translateX(-50%);color:#fff" aria-hidden="true"><use href="#sq"/></svg>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <h1>El mejor cuidado para tu mejor amigo, en cada etapa <span class="hand">de cachorro a abuelo</span></h1>
+          <div class="hero-bottom">
+            <p>Un espacio acogedor y amigable para cada revisión. Atención personalizada para cada paciente peludo.</p>
+            <a class="btn btn-coral" href="#cita">Reservar ahora</a>
+          </div>
+        </div>
+
+        <div class="hero-photo">
+          <img src="assets/img/hero-perro.webp" width="788" height="962" alt="Perro negro mirando a cámara con curiosidad" fetchpriority="high">
+        </div>
+
+        <div class="hero-side">
+          <a class="emergency" href="tel:+34960000000">
+            <strong>24/7</strong>
+            <span>Urgencias</span>
+            <span class="row">Ayuda rápida cuando más importa <span class="circle-btn" aria-hidden="true"><svg><use href="#arrow"/></svg></span></span>
+          </a>
+        </div>
+
+        <div class="wordmark" aria-hidden="true">Huellitas</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SERVICIOS ============ -->
+  <section class="section" id="servicios" style="padding-top:clamp(48px,6vw,72px)">
+    <div class="wrap">
+      <div class="dark-panel">
+        <svg class="squiggle" style="width:1200px;left:-10%;top:10%;color:#16212D" aria-hidden="true"><use href="#sq"/></svg>
+        <div class="center reveal" style="position:relative">
+          <h2>Servicios completos pensados <br>para su <span class="hand hand-inline">bienestar</span></h2>
+        </div>
+        <div class="services" style="position:relative">
+          <article class="s-card reveal">
+            <img src="assets/img/srv-diagnostico.webp" width="520" height="620" alt="Perro de pastor australiano en revisión" loading="lazy">
+            <h3>Diagnóstico avanzado</h3>
+            <p>Radiografía digital, ecografía y analíticas con resultados el mismo día.</p>
+            <a class="circle-btn" href="#cita" aria-label="Pedir cita de diagnóstico"><svg><use href="#arrow"/></svg></a>
+          </article>
+          <article class="s-card reveal">
+            <img src="assets/img/srv-preventiva.webp" width="520" height="620" alt="Gato blanco y negro asomado a una mesa" loading="lazy">
+            <h3>Medicina preventiva</h3>
+            <p>Vacunas, desparasitación y chequeos para que nunca haya sustos.</p>
+            <a class="circle-btn" href="#cita" aria-label="Pedir cita de medicina preventiva"><svg><use href="#arrow"/></svg></a>
+          </article>
+          <article class="s-card reveal">
+            <img src="assets/img/srv-dental.webp" width="520" height="620" alt="Cachorro de corgi sobre fondo naranja" loading="lazy">
+            <h3>Cuidado dental</h3>
+            <p>Limpiezas con ultrasonidos y revisión dental anual sin dolor.</p>
+            <a class="circle-btn" href="#cita" aria-label="Pedir cita de cuidado dental"><svg><use href="#arrow"/></svg></a>
+          </article>
+          <article class="s-card reveal">
+            <img src="assets/img/srv-urgencias.webp" width="520" height="620" alt="Bulldog francés con sudadera amarilla" loading="lazy">
+            <h3>Urgencias</h3>
+            <p>Veterinario de guardia 24 horas, los 365 días del año.</p>
+            <a class="circle-btn" href="tel:+34960000000" aria-label="Llamar a urgencias"><svg><use href="#arrow"/></svg></a>
+          </article>
+        </div>
+        <div class="panel-cta"><a class="btn btn-coral" href="#cita">Pedir cita</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MÁS QUE UN BUEN CUIDADO ============ -->
+  <section class="section" id="nosotros" style="padding-top:0">
+    <div class="wrap more-grid">
+      <div class="reveal">
+        <h2>Más que un buen <br>cuidado para cada <br>pequeña necesidad. <span class="hand">siempre a su lado</span></h2>
+        <ul class="points">
+          <li><span class="pi"><svg><use href="#paw"/></svg></span><span><strong>Medicina moderna y cercana</strong><span>Tecnología de diagnóstico actual con un trato tranquilo que hace que cada visita sea más fácil.</span></span></li>
+          <li><span class="pi"><svg><use href="#paw"/></svg></span><span><strong>Planes de cuidado a medida</strong><span>Cada tratamiento se adapta a la edad, la raza y el carácter de tu mascota.</span></span></li>
+          <li><span class="pi"><svg><use href="#paw"/></svg></span><span><strong>Tranquilidad con novedades en directo</strong><span>Fotos, vídeo y mensajes mientras tu mascota está con nosotros.</span></span></li>
+        </ul>
+        <a class="btn btn-coral" href="#cita">Pedir cita</a>
+      </div>
+      <div class="collage reveal">
+        <img src="assets/img/ff-gatito.webp" width="440" height="520" alt="Gatito levantando la pata" loading="lazy">
+        <img src="assets/img/ff-cachorro.webp" width="440" height="520" alt="Cachorro de golden tumbado" loading="lazy">
+        <img src="assets/img/ff-conejo.webp" width="440" height="520" alt="Conejo blanco en el jardín" loading="lazy">
+        <img src="assets/img/ff-golden.webp" width="440" height="520" alt="Cachorro corriendo al atardecer" loading="lazy">
+        <div class="ff-card">
+          <h3>El cuidado sin miedo empieza aquí</h3>
+          <p><b>01 · Ambiente tranquilo.</b> Salas separadas para perros y gatos, música suave y feromonas calmantes.</p>
+          <p><b>02 · Cariño en cada visita.</b> Premios, paciencia y nada de prisas para que vuelva con la cola alta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ TRANSPARENCIA ============ -->
+  <section class="section transp" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="reveal">Tu mascota recibe el cuidado <br>que siempre puedes ver. <span class="hand">transparencia</span></h2>
+      <div class="transp-grid">
+        <div class="wordmark" aria-hidden="true">Huellitas</div>
+        <div class="transp-left reveal">
+          <p>Cada visita, cada tratamiento y cada noche de ingreso, contados con claridad para que tú también estés tranquilo.</p>
+          <a class="btn btn-coral" href="#cita">Reservar ahora</a>
+        </div>
+        <div class="transp-photo reveal">
+          <img src="assets/img/transp-labrador.webp" width="660" height="1008" alt="Labrador dorado sonriente levantando la pata para saludar" loading="lazy">
+        </div>
+        <div class="transp-right reveal">
+          <div class="live-card">
+            <img src="assets/img/live-perro.webp" width="480" height="320" alt="Perro tricolor mirando a cámara" loading="lazy">
+            <h3>Vídeo en directo 24/7</h3>
+            <p>Mira a tu mascota desde el móvil cuando quieras.</p>
+          </div>
+          <div class="live-card">
+            <img src="assets/img/live-gato.webp" width="480" height="320" alt="Gato atigrado tumbado" loading="lazy">
+            <h3>Siempre conectados</h3>
+            <p>Avisos y mensajes del equipo en cada paso.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CITA ============ -->
+  <section class="section booking" id="cita" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="reveal">Dales el cuidado que de verdad merecen. <span class="hand">con cariño</span></h2>
+      <p class="booking-intro reveal">Reserva en un minuto. Elige día, hora y cuéntanos quién viene: nosotros nos encargamos del resto y te confirmamos por WhatsApp.</p>
+      <form class="form reveal" id="form" novalidate>
+        <div class="grid-2">
+          <div class="field"><label for="nombre">Tu nombre</label><input type="text" id="nombre" name="nombre" autocomplete="name" placeholder="Laura García" required></div>
+          <div class="field"><label for="tel">Teléfono</label><input type="tel" id="tel" name="tel" autocomplete="tel" placeholder="600 000 000" required></div>
+        </div>
+        <fieldset>
+          <legend class="legend">Fecha</legend>
+          <div class="chips" id="dates"></div>
+        </fieldset>
+        <fieldset>
+          <legend class="legend">Hora</legend>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="hora" value="09:00"><span>09:00</span></label>
+            <label class="chip"><input type="radio" name="hora" value="10:30" disabled><span>10:30</span></label>
+            <label class="chip"><input type="radio" name="hora" value="11:00"><span>11:00</span></label>
+            <label class="chip"><input type="radio" name="hora" value="12:30" checked><span>12:30</span></label>
+            <label class="chip"><input type="radio" name="hora" value="16:00"><span>16:00</span></label>
+            <label class="chip"><input type="radio" name="hora" value="17:30" disabled><span>17:30</span></label>
+            <label class="chip"><input type="radio" name="hora" value="19:00"><span>19:00</span></label>
+            <label class="chip"><input type="radio" name="hora" value="20:00"><span>20:00</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend class="legend">Tu mascota</legend>
+          <div class="pets">
+            <label class="pet"><input type="radio" name="mascota" value="perro" checked><span>Perro<svg><use href="#pet-dog"/></svg></span></label>
+            <label class="pet"><input type="radio" name="mascota" value="gato"><span>Gato<svg><use href="#pet-cat"/></svg></span></label>
+            <label class="pet"><input type="radio" name="mascota" value="ave"><span>Ave<svg><use href="#pet-bird"/></svg></span></label>
+            <label class="pet"><input type="radio" name="mascota" value="roedor"><span>Roedor<svg><use href="#pet-rodent"/></svg></span></label>
+            <label class="pet"><input type="radio" name="mascota" value="reptil"><span>Reptil<svg><use href="#pet-reptile"/></svg></span></label>
+            <label class="pet"><input type="radio" name="mascota" value="otro"><span>Otro<svg><use href="#pet-other"/></svg></span></label>
+          </div>
+        </fieldset>
+        <input class="hp" name="web" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <label class="consent"><input type="checkbox" id="priv" required>He leído y acepto la política de privacidad. Usaremos tus datos solo para gestionar tu cita.</label>
+        <div class="center"><button class="btn btn-coral" type="submit">Reservar mi cita</button></div>
+        <p class="form-msg" id="form-msg" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- ============ FAQ ============ -->
+  <section class="section" id="faq" style="padding-top:0">
+    <div class="wrap">
+      <div class="dark-panel">
+        <svg class="squiggle" style="width:1200px;right:-20%;top:0;color:#16212D" aria-hidden="true"><use href="#sq"/></svg>
+        <div class="faq-head reveal" style="position:relative">
+          <h2><span>¿Tienes dudas?<br>Estamos aquí para ayudarte.</span> <span class="hand">claridad</span></h2>
+        </div>
+        <div class="faqs" style="position:relative">
+          <article class="faq reveal">
+            <div class="ph"><img src="assets/img/faq-perro.webp" width="440" height="520" alt="" loading="lazy"><p class="answer" id="a1">Desde esta web en un minuto, por teléfono o por WhatsApp. Te confirmamos al momento.</p></div>
+            <h3>¿Cómo reservo una visita?</h3>
+            <button class="circle-btn" aria-expanded="false" aria-controls="a1" aria-label="Ver respuesta: cómo reservo una visita"><svg><use href="#plus"/></svg></button>
+          </article>
+          <article class="faq reveal">
+            <div class="ph"><img src="assets/img/faq-playa.webp" width="440" height="520" alt="" loading="lazy"><p class="answer" id="a2">Su cartilla, informes previos si los tienes y, si es posible, una muestra de heces reciente.</p></div>
+            <h3>¿Qué llevo a la primera visita?</h3>
+            <button class="circle-btn" aria-expanded="false" aria-controls="a2" aria-label="Ver respuesta: qué llevo a la primera visita"><svg><use href="#plus"/></svg></button>
+          </article>
+          <article class="faq reveal">
+            <div class="ph"><img src="assets/img/faq-gato.webp" width="440" height="520" alt="" loading="lazy"><p class="answer" id="a3">Sí. Durante el ingreso recibes fotos, vídeo en directo y mensajes del equipo veterinario.</p></div>
+            <h3>¿Recibiré novedades si se queda ingresado?</h3>
+            <button class="circle-btn" aria-expanded="false" aria-controls="a3" aria-label="Ver respuesta: recibiré novedades si se queda ingresado"><svg><use href="#plus"/></svg></button>
+          </article>
+          <article class="faq reveal">
+            <div class="ph"><img src="assets/img/faq-samoyedo.webp" width="440" height="520" alt="" loading="lazy"><p class="answer" id="a4">Sí, 24 horas al día, todos los días del año, sin cita. Llámanos de camino para prepararlo todo.</p></div>
+            <h3>¿Atendéis urgencias?</h3>
+            <button class="circle-btn" aria-expanded="false" aria-controls="a4" aria-label="Ver respuesta: atendéis urgencias"><svg><use href="#plus"/></svg></button>
+          </article>
+          <article class="faq reveal">
+            <div class="ph"><img src="assets/img/faq-corgis.webp" width="440" height="520" alt="" loading="lazy"><p class="answer" id="a5">Una vez al año en adultos y cada seis meses a partir de los siete años o con enfermedades crónicas.</p></div>
+            <h3>¿Cada cuánto hago una revisión?</h3>
+            <button class="circle-btn" aria-expanded="false" aria-controls="a5" aria-label="Ver respuesta: cada cuánto hago una revisión"><svg><use href="#plus"/></svg></button>
+          </article>
+        </div>
+        <div class="panel-cta"><a class="btn btn-coral" href="#contacto">Contáctanos</a></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ OPINIONES ============ -->
+  <section class="section reviews" style="padding-top:0">
+    <div class="wrap">
+      <h2 class="center reveal">Queridos por las mascotas. <br>Avalados por sus familias. <span class="hand">confianza</span></h2>
+      <!-- TODO: sustituir por reseñas reales de Google -->
+      <div class="reviews-grid">
+        <div class="reviews-col">
+          <article class="review reveal"><header><strong>Elena</strong><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></header><p>«Desde que entramos nos sentimos en casa. A Rocky le explicaron todo con calma y a mí también. Ya no le da miedo ir al veterinario.»</p></article>
+          <article class="review reveal"><header><strong>Javier</strong><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></header><p>«Turrón estuvo ingresado tres días y me mandaban vídeos cada mañana. Esa tranquilidad no tiene precio.»</p></article>
+        </div>
+        <div class="reviews-photo reveal"><img src="assets/img/opiniones-conejo.webp" width="807" height="917" alt="Conejo marrón y blanco mirando a cámara con las orejas levantadas" loading="lazy"></div>
+        <div class="reviews-col">
+          <article class="review reveal"><header><strong>Sofía</strong><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></header><p>«Por fin una clínica que sabe de conejos. Detectaron un problema dental que en otros sitios no vieron.»</p></article>
+          <article class="review reveal"><header><strong>Daniel</strong><span class="stars" aria-label="5 de 5 estrellas">★★★★★</span></header><p>«Urgencia a las 3 de la madrugada y nos atendieron en diez minutos. Profesionales y muy humanos.»</p></article>
+        </div>
+      </div>
+      <p class="score reveal"><b>4,9</b> de media en más de 600 reseñas</p>
+    </div>
+  </section>
+</main>
+
+<footer id="contacto">
+  <div class="wrap">
+    <div class="foot">
+      <ul>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#nosotros">Nosotros</a></li>
+        <li><a href="#cita">Pedir cita</a></li>
+        <li><a href="tel:+34960000000">960 000 000</a></li>
+      </ul>
+      <ul>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">TikTok</a></li>
+        <li><a href="#">Facebook</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+      <div class="news">
+        <h3>Un extra de cuidado, en tu bandeja de entrada</h3>
+        <form onsubmit="event.preventDefault(); this.querySelector('small').textContent='¡Gracias! (demo de portfolio)';">
+          <label class="hp" for="nl">Email</label>
+          <input type="email" id="nl" placeholder="tu@email.com" autocomplete="email" required>
+          <button class="btn btn-coral" style="background:var(--ink);color:#fff;box-shadow:none" type="submit">Suscribirme</button>
+        </form>
+        <small>Consejos de salud y recordatorios. Sin spam.</small>
+        <div class="socials">
+          <a href="#" aria-label="Instagram"><svg><use href="#ig"/></svg></a>
+          <a href="#" aria-label="YouTube"><svg><use href="#yt"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg><use href="#fb"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg><use href="#tt"/></svg></a>
+        </div>
+      </div>
+    </div>
+    <div class="legal">
+      <nav aria-label="Legal"><a href="#">Política de privacidad</a><a href="#">Aviso legal</a><a href="#">Cookies</a></nav>
+      <span>Calle Feria, 00 · 41003 Sevilla · © 2026 Huellitas · Proyecto de portfolio creado por La Trama</span>
+    </div>
+    <div class="giant" aria-hidden="true">HUELLITAS</div>
+  </div>
+</footer>
+
+<script>
+  document.body.classList.remove('no-js');
+
+  // Menú móvil
+  const menuBtn = document.querySelector('.menu-btn');
+  const nav = document.getElementById('nav');
+  const setMenu = (open) => {
+    nav.classList.toggle('open', open);
+    menuBtn.setAttribute('aria-expanded', open);
+    menuBtn.setAttribute('aria-label', open ? 'Cerrar menú' : 'Abrir menú');
+    menuBtn.querySelector('use').setAttribute('href', open ? '#close' : '#menu');
+  };
+  menuBtn.addEventListener('click', () => setMenu(!nav.classList.contains('open')));
+  nav.addEventListener('click', (e) => { if (e.target.closest('a')) setMenu(false); });
+  document.addEventListener('keydown', (e) => { if (e.key === 'Escape') setMenu(false); });
+
+  // Enlace activo según la sección visible
+  const links = [...nav.querySelectorAll('a')];
+  const spy = new IntersectionObserver((entries) => {
+    entries.forEach((en) => {
+      if (!en.isIntersecting) return;
+      links.forEach((a) => a.toggleAttribute('aria-current', a.getAttribute('href') === '#' + en.target.id));
+      links.forEach((a) => a.hasAttribute('aria-current') && a.setAttribute('aria-current', 'page'));
+    });
+  }, { rootMargin: '-45% 0px -50% 0px' });
+  ['inicio', 'servicios', 'nosotros', 'faq', 'contacto'].forEach((id) => { const s = document.getElementById(id); if (s) spy.observe(s); });
+
+  // Aparición al hacer scroll
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((en) => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { threshold: .12 });
+  document.querySelectorAll('.reveal').forEach((el) => io.observe(el));
+
+  // Próximos 7 días para la reserva
+  const dates = document.getElementById('dates');
+  const fmt = new Intl.DateTimeFormat('es-ES', { weekday: 'short', day: 'numeric' });
+  for (let i = 1; i <= 7; i++) {
+    const d = new Date(); d.setDate(d.getDate() + i);
+    const txt = fmt.format(d).replace('.', '');
+    const lab = document.createElement('label'); lab.className = 'chip';
+    lab.innerHTML = `<input type="radio" name="fecha" value="${d.toISOString().slice(0, 10)}"${i === 1 ? ' checked' : ''}><span>${txt.charAt(0).toUpperCase() + txt.slice(1)}</span>`;
+    dates.appendChild(lab);
+  }
+
+  // FAQ: mostrar respuesta sobre la foto
+  document.querySelectorAll('.faq .circle-btn').forEach((b) => {
+    b.addEventListener('click', () => {
+      const card = b.closest('.faq');
+      const open = card.classList.toggle('open');
+      b.setAttribute('aria-expanded', open);
+    });
+  });
+
+  // Formulario demo (sin backend)
+  const form = document.getElementById('form');
+  const msg = document.getElementById('form-msg');
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
+    msg.classList.add('show');
+    if (!form.checkValidity()) { msg.textContent = 'Revisa tu nombre y teléfono, y acepta la política de privacidad.'; return; }
+    msg.textContent = '¡Cita solicitada! Esto es una demo de portfolio: en la web real recibirías la confirmación por WhatsApp.';
+  });
+</script>
+</body>
+</html>

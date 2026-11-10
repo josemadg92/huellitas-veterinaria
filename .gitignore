@@ -1,0 +1,11 @@
+# Originales con fondo de cuadros (la web usa las versiones recortadas en PNG)
+assets/img/conejo.jpg
+assets/img/coquer.jpg
+assets/img/labrador.jfif
+assets/img/perrito-hero.jpg
+assets/img/perrito-portada.png
+
+# Sistema / editor
+.DS_Store
+Thumbs.db
+.vscode/
