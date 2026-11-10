@@ -125,14 +125,15 @@
 
     /* ===== Hero ===== */
     .hero { position: relative; padding: 32px 0 0; overflow: hidden; }
-    .hero-grid { display: grid; grid-template-columns: 1fr 1.05fr 1fr; gap: 24px; min-height: 720px; position: relative; }
+    /* El hero ocupa el alto de la ventana: --hero-top = barra + cabecera + padding (se mide en JS) */
+    .hero-grid { display: grid; grid-template-columns: 1fr 1.05fr 1fr; gap: 24px; min-height: max(560px, calc(100vh - var(--hero-top, 143px))); min-height: max(560px, calc(100svh - var(--hero-top, 143px))); position: relative; }
     .hero-copy { position: relative; z-index: 3; padding-top: 8px; display: flex; flex-direction: column; justify-content: space-between; padding-bottom: 32px; }
     .hero h1 { font-size: clamp(2.3rem, 4vw, 3.1rem); }
     .hero h1 .hand { font-size: .78em; display: block; margin: 18px 0 0 18%; transform: rotate(-4deg); white-space: nowrap; }
     .hero-bottom p { color: var(--muted); max-width: 30ch; margin-bottom: 20px; font-weight: 500; }
-    .wordmark { position: absolute; left: -50vw; right: -50vw; text-align: center; bottom: 200px; font-family: "Raleway Display", var(--font); font-weight: 600; font-size: clamp(5rem, 19vw, 15.5rem); letter-spacing: -.06em; line-height: .8; color: #1B2430; white-space: nowrap; z-index: 1; user-select: none; text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; }
+    .wordmark { position: absolute; left: -50vw; right: -50vw; text-align: center; bottom: 200px; font-family: "Raleway Display", var(--font); font-weight: 600; font-size: clamp(5rem, min(19vw, 26vh), 15.5rem); letter-spacing: -.06em; line-height: .8; color: #1B2430; white-space: nowrap; z-index: 1; user-select: none; text-rendering: geometricPrecision; -webkit-font-smoothing: antialiased; }
     .hero-photo { position: relative; z-index: 2; align-self: end; justify-self: center; width: 112%; max-width: 440px; }
-    .hero-photo img { width: 100%; height: auto; }
+    .hero-photo img { width: 100%; height: auto; max-height: calc(100svh - var(--hero-top, 143px) - 40px); object-fit: contain; object-position: center bottom; }
     .hero-side { position: relative; z-index: 3; display: flex; flex-direction: column; justify-content: flex-start; align-items: flex-end; padding: 24px 0 48px; }
     .emergency { width: 220px; background: var(--ink); color: #fff; border-radius: var(--r-md); padding: 18px; text-decoration: none; box-shadow: var(--shadow); transition: transform .2s; }
     .emergency:hover { transform: translateY(-4px); }
@@ -147,10 +148,12 @@
       .hero-grid { grid-template-columns: 1fr; min-height: 0; }
       .hero-copy { padding-bottom: 0; gap: 24px; }
       .hero h1 .hand { margin-left: 40%; }
-      .hero-photo { max-width: 380px; width: 100%; order: 3; }
+      .hero-photo { max-width: 340px; width: 100%; order: 3; margin-top: 8px; }
+      .hero-photo img { max-height: none; }
       .hero-side { order: 2; flex-direction: row; justify-content: flex-start; align-items: stretch; gap: 12px; padding: 0; }
       .emergency { width: auto; flex: 1; }
-      .wordmark { bottom: 20px; }
+      /* «Huellitas» a todo el ancho, cruzando al perro por el pecho (el perro es el último elemento del grid) */
+      .wordmark { font-size: min(21vw, 9rem); bottom: calc(min(100vw - 32px, 340px) * .5); }
     }
 
     /* ===== Panel oscuro (servicios / FAQ) ===== */
@@ -647,6 +650,15 @@
 
 <script>
   document.body.classList.remove('no-js');
+
+  // Alto del hero = ventana menos lo que hay encima (barra de aviso + cabecera + padding)
+  const heroGrid = document.querySelector('.hero-grid');
+  const setHeroTop = () => {
+    const top = heroGrid.getBoundingClientRect().top + window.scrollY;
+    document.documentElement.style.setProperty('--hero-top', Math.round(top) + 'px');
+  };
+  setHeroTop();
+  window.addEventListener('resize', setHeroTop);
 
   // Menú móvil
   const menuBtn = document.querySelector('.menu-btn');
