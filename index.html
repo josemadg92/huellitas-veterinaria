@@ -63,6 +63,9 @@
     @font-face { font-family: "Raleway Display"; src: url("assets/fonts/raleway-700.woff2") format("woff2"); font-weight: 700; font-display: swap; }
     *, *::before, *::after { box-sizing: border-box; }
     html { scroll-behavior: smooth; }
+    /* Anclas: dejar sitio a la cabecera fija; #inicio lleva al principio de la página */
+    [id] { scroll-margin-top: 92px; }
+    #inicio { scroll-margin-top: 100vh; }
     body { margin: 0; font-family: var(--font); color: var(--ink); background: var(--bg); line-height: 1.6; font-size: 1rem; overflow-x: hidden; }
     img { display: block; max-width: 100%; height: auto; }
     svg { display: block; }
