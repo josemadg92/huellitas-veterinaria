@@ -273,7 +273,12 @@
     .faq .ph { position: relative; border-radius: 16px; overflow: hidden; background: var(--slate); }
     .faq .ph img { width: 100%; aspect-ratio: 11 / 13; object-fit: cover; transition: opacity .3s; }
     .faq .answer { position: absolute; inset: 0; padding: 16px; background: var(--slate); color: #fff; font-size: .95rem; font-weight: 500; line-height: 1.5; display: flex; align-items: center; opacity: 0; transition: opacity .3s; }
-    .faq.open .answer { opacity: 1; }
+    /* Abierta: la respuesta sustituye a la foto y el recuadro crece si el texto no cabe
+       (aspect-ratio como mínimo: con altura automática el contenido puede alargarlo) */
+    .faq.open .ph img { display: none; }
+    .faq.open .answer { position: static; opacity: 1; aspect-ratio: 11 / 13; animation: faq-in .3s ease; }
+    @keyframes faq-in { from { opacity: 0; } to { opacity: 1; } }
+    @media (max-width: 620px) { .faq .answer { padding: 14px; font-size: .9rem; line-height: 1.45; } }
     .faq h3 { font-size: 1rem; margin: 14px 6px 12px; min-height: 2.5em; }
     .faq .circle-btn { margin-left: 6px; }
     .faq .circle-btn svg { transition: transform .3s; }
